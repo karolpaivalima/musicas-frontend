@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Música | Minhas Músicas</title>
+    <link rel="stylesheet" href="editar.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">♫</span>
+            <span>minhas<span class="destaque">músicas.</span></span>
+        </a>
+        <span class="header-texto">SUA BIBLIOTECA PESSOAL</span>
+    </header>
+
+    <main>
+        <a href="index.html" class="voltar">← Voltar para a lista</a>
+
+        <div class="titulo-pagina">
+            <span class="etiqueta">✦ PERSONALIZE SUA COLEÇÃO</span>
+            <h1>Ajuste cada <span>detalhe.</span></h1>
+            <p>Atualize as informações da sua música.</p>
+        </div>
+
+        <div class="painel">
+            <div class="painel-topo">
+                <div class="icone-painel">✎</div>
+                <div>
+                    <h2>Editar música</h2>
+                    <p>Modifique os campos desejados.</p>
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="titulo">Título da música</label>
+                    <input type="text" id="titulo" placeholder="Título da música">
+                </div>
+
+                <div class="campo">
+                    <label for="artista">Artista</label>
+                    <input type="text" id="artista" placeholder="Nome do artista">
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Gênero musical</label>
+                    <input type="text" id="genero" placeholder="Gênero musical">
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="ano">Ano de lançamento</label>
+                        <input type="number" id="ano" placeholder="Ano">
+                    </div>
+
+                    <div class="campo">
+                        <label for="duracao">Duração em minutos</label>
+                        <input type="number" id="duracao" placeholder="Minutos">
+                    </div>
+                </div>
+
+                <button id="botaoSalvar">✓ Salvar alterações</button>
+            </div>
+        </div>
+
+        <p class="rodape">♫ Sua coleção, do seu jeito.</p>
+    </main>
+
+    <script src="editar.js"></script>
+</body>
+</html>

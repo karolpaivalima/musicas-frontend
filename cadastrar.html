@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Música | Minhas Músicas</title>
+    <link rel="stylesheet" href="cadastrar.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">♫</span>
+            <span>minhas<span class="destaque">músicas.</span></span>
+        </a>
+        <span class="header-texto">SUA BIBLIOTECA PESSOAL</span>
+    </header>
+
+    <main>
+        <a href="index.html" class="voltar">← Voltar para a lista</a>
+
+        <div class="titulo-pagina">
+            <span class="etiqueta">✦ EXPANDA SUA COLEÇÃO</span>
+            <h1>Uma nova <span>descoberta.</span></h1>
+            <p>Adicione uma música especial à sua biblioteca.</p>
+        </div>
+
+        <div class="painel">
+            <div class="painel-topo">
+                <div class="icone-painel">♫</div>
+                <div>
+                    <h2>Cadastrar música</h2>
+                    <p>Preencha as informações abaixo.</p>
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="titulo">Título da música</label>
+                    <input type="text" id="titulo" placeholder="Ex: Achilles Come Down">
+                </div>
+
+                <div class="campo">
+                    <label for="artista">Artista</label>
+                    <input type="text" id="artista" placeholder="Ex: Gang of Youths">
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Gênero musical</label>
+                    <input type="text" id="genero" placeholder="Ex: Indie Rock">
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="ano">Ano de lançamento</label>
+                        <input type="number" id="ano" placeholder="Ex: 2017">
+                    </div>
+
+                    <div class="campo">
+                        <label for="duracao">Duração em minutos</label>
+                        <input type="number" id="duracao" placeholder="Ex: 7">
+                    </div>
+                </div>
+
+                <button id="botaoCadastrar">＋ Cadastrar música</button>
+            </div>
+        </div>
+
+        <p class="rodape">♫ Toda música tem uma história.</p>
+    </main>
+
+    <script src="cadastrar.js"></script>
+</body>
+</html>

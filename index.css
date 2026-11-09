@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --fundo: #090912;
+    --card: #141421;
+    --borda: #29283a;
+    --texto: #f7f5ff;
+    --cinza: #9995ad;
+    --roxo: #ad8aff;
+    --roxo-escuro: #7951dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    height: 90px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: var(--roxo);
+    color: #140d24;
+    border-radius: 13px;
+    font-size: 28px;
+}
+
+.destaque {
+    color: var(--roxo);
+}
+
+.botao-novo,
+.botao-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--roxo);
+    color: #130d23;
+    font-weight: 800;
+    padding: 14px 22px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.botao-novo:hover,
+.botao-hero:hover {
+    background: #c4aaff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px #ad8aff35;
+}
+
+main {
+    max-width: 1250px;
+    padding: 45px 28px 90px;
+    margin: auto;
+}
+
+.hero {
+    min-height: 390px;
+    background:
+        radial-gradient(circle at 85% 40%, #7d4eea35, transparent 40%),
+        linear-gradient(120deg, #1c1632, #10101d);
+    border: 1px solid #3a3057;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 65px;
+    position: relative;
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 570px;
+}
+
+.etiqueta {
+    color: var(--roxo);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(45px, 6vw, 76px);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--roxo);
+}
+
+.hero p {
+    color: #b7aecb;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-arte {
+    position: relative;
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #ad8aff55;
+}
+
+.circulo-1 {
+    width: 290px;
+    height: 290px;
+    animation: girar 24s linear infinite;
+    border-style: dashed;
+}
+
+.circulo-2 {
+    width: 230px;
+    height: 230px;
+    background: #ad8aff15;
+    box-shadow: 0 0 100px #ad8aff33;
+}
+
+.circulo-3 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #b994ff, #5e36c2);
+    box-shadow: 0 0 60px #ad8aff55;
+}
+
+.nota {
+    font-size: 105px;
+    z-index: 1;
+    color: #180d36;
+    transform: rotate(-12deg);
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
+
+.cabecalho-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 65px 0 25px;
+}
+
+.cabecalho-lista h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
+
+.cabecalho-lista h2 span {
+    color: var(--roxo);
+}
+
+.indicador {
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+.indicador::first-letter {
+    color: var(--roxo);
+}
+
+#listaMusicas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.musica {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: 0.3s;
+}
+
+.musica:hover {
+    border-color: #8f69e8;
+    background: #1c192d;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px #00000035;
+}
+
+.capa {
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #a780ff, #42277f);
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    color: #eee5ff;
+}
+
+.informacoes {
+    flex: 1;
+}
+
+.informacoes h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.artista {
+    color: #c4b7e1;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.detalhes {
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.editar,
+.apagar {
+    padding: 11px 17px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.editar {
+    color: #cbb7ff;
+    background: #ad8aff18;
+    border: 1px solid #ad8aff45;
+}
+
+.apagar {
+    color: #ff9da8;
+    background: #ff667710;
+    border: 1px solid #ff667733;
+}
+
+.editar:hover {
+    background: #ad8aff35;
+}
+
+.apagar:hover {
+    background: #ff66772c;
+}
+
+footer {
+    border-top: 1px solid var(--borda);
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--roxo);
+    font-weight: 800;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .botao-novo {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 40px 28px;
+    }
+
+    .hero-arte {
+        display: none;
+    }
+
+    .musica {
+        flex-wrap: wrap;
+        padding: 17px;
+        gap: 15px;
+    }
+
+    .acoes {
+        width: 100%;
+    }
+
+    .editar,
+    .apagar {
+        flex: 1;
+        text-align: center;
+    }
+
+    .indicador {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

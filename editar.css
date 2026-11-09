@@ -1,0 +1,32 @@
+@import url("cadastrar.css");
+
+.icone-painel {
+    background: linear-gradient(135deg, #c2a4ff, #7851d2);
+    font-size: 27px;
+}
+
+#botaoSalvar {
+    width: 100%;
+    padding: 18px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #bd9cff, #9970ef);
+    color: #160d28;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoSalvar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px #ad8aff45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #botaoSalvar {
+        transition: none;
+    }
+}

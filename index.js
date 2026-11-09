@@ -1,0 +1,38 @@
+const urlBackend = "http://localhost:3000";
+
+const listaMusicas = document.getElementById("listaMusicas");
+
+async function buscarMusicas() {
+    const resposta = await fetch(urlBackend);
+
+    const musicas = await resposta.json();
+
+    listaMusicas.innerHTML = "";
+
+    musicas.forEach((musica) => {
+        listaMusicas.innerHTML += `
+            <article class="musica">
+                <div class="capa">♫</div>
+
+                <div class="informacoes">
+                    <h2>${musica.titulo}</h2>
+                    <p class="artista">${musica.artista}</p>
+                    <p class="detalhes">
+                        ${musica.genero} | ${musica.ano} | ${musica.duracao} min
+                    </p>
+                </div>
+
+                <div class="acoes">
+                    <a class="editar" href="editar.html?id=${musica.id}">
+                        ✎ Editar
+                    </a>
+                    <button class="apagar">
+                        ✕ Apagar
+                    </button>
+                </div>
+            </article>
+        `;
+    });
+}
+
+buscarMusicas();

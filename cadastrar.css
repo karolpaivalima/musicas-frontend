@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --fundo: #090912;
+    --card: #151421;
+    --borda: #302c40;
+    --texto: #f7f5ff;
+    --cinza: #9995ad;
+    --roxo: #ad8aff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 25%, #36205b50, transparent 55%),
+        var(--fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    height: 90px;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: var(--roxo);
+    color: #140d24;
+    border-radius: 13px;
+    font-size: 28px;
+}
+
+.destaque {
+    color: var(--roxo);
+}
+
+.header-texto {
+    font-size: 11px;
+    color: var(--cinza);
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 760px;
+    padding: 45px 20px 90px;
+    margin: auto;
+}
+
+.voltar {
+    color: #bcb0d5;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.voltar:hover {
+    color: var(--roxo);
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin: 60px 0 35px;
+}
+
+.etiqueta {
+    color: var(--roxo);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 800;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(36px, 6vw, 55px);
+    letter-spacing: -2px;
+    margin: 16px 0 10px;
+}
+
+h1 span {
+    color: var(--roxo);
+}
+
+.titulo-pagina p {
+    color: var(--cinza);
+    font-size: 15px;
+}
+
+.painel {
+    background: var(--card);
+    border: 1px solid #39304e;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 25px 80px #00000045;
+}
+
+.painel-topo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--borda);
+    margin-bottom: 30px;
+}
+
+.icone-painel {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #b28bff, #6841bd);
+    color: #180e32;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+}
+
+.painel-topo h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+}
+
+.painel-topo p {
+    color: var(--cinza);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ded8ec;
+}
+
+input {
+    width: 100%;
+    padding: 16px 18px;
+    background: #0d0d18;
+    border: 1px solid #373248;
+    border-radius: 11px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+}
+
+input::placeholder {
+    color: #777087;
+}
+
+input:focus {
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 4px #ad8aff16;
+    background: #121021;
+}
+
+.linha {
+    display: flex;
+    gap: 18px;
+}
+
+#botaoCadastrar {
+    width: 100%;
+    padding: 18px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #bd9cff, #9970ef);
+    color: #160d28;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoCadastrar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px #ad8aff45;
+}
+
+.rodape {
+    text-align: center;
+    color: #827a94;
+    margin-top: 35px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .header-texto {
+        display: none;
+    }
+
+    .painel {
+        padding: 23px;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .titulo-pagina {
+        margin-top: 45px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
